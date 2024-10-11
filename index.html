@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Task Manager</title>
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1 id="page-title">Task Manager</h1>
+            <div class="language-switcher">
+                <button id="en-btn">English</button>
+                <button id="tr-btn">Türkçe</button>
+            </div>
+            <div class="dark-mode-toggle">
+                <button id="dark-mode-btn">Dark Mode</button>
+            </div>
+        </header>
+        
+        
+        <!-- Task Input Section -->
+        <div class="task-input-section">
+            <input type="text" id="new-task" placeholder="Add a new task..." aria-label="New task input">
+            <select id="priority-level" aria-label="Priority level">
+                <option value="low" data-en="Low Priority" data-tr="Düşük Öncelik">Low Priority</option>
+                <option value="medium" data-en="Medium Priority" data-tr="Orta Öncelik">Medium Priority</option>
+                <option value="high" data-en="High Priority" data-tr="Yüksek Öncelik">High Priority</option>
+            </select>
+            <select id="task-category" aria-label="Task category">
+                <option value="work" data-en="Work" data-tr="İş">Work</option>
+                <option value="personal" data-en="Personal" data-tr="Kişisel">Personal</option>
+                <option value="study" data-en="Study" data-tr="Ders">Study</option>
+                <option value="shopping" data-en="Shopping" data-tr="Alışveriş">Shopping</option>
+            </select>
+            <button id="add-task-btn" data-en="Add Task" data-tr="Görev Ekle">Add Task</button>
+        </div>
+
+        <div class="task-sort-section">
+            <select id="sort-tasks" aria-label="Sort tasks">
+                <option value="none">Sort By</option>
+                <option value="priority">Priority</option>
+                <option value="completion">Completion</option>
+                <option value="alphabetical">Alphabetical</option>
+                <option value="category">Category</option>
+            </select>
+        </div>
+
+        <div class="task-list-section">
+            <ul id="tasks" aria-label="Task list"></ul>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 <a href="https://www.linkedin.com/in/ali-ilgaz-karatas/">Ali Ilgaz Karatas</a> - All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
